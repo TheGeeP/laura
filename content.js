@@ -17,7 +17,7 @@ window.CV = {
   strengths: ['Running trips on the ground', 'Group leadership', 'Ski instruction', 'Events for 500+ people'],
   interests: ['Trekking', 'Skiing', 'Snorkelling', 'Yoga', 'Salsa & bachata', 'Cooking'],
   education: [
-    ['Bachelor, Events Management & Business Tourism', 'INFA', '2013'],
+    ['Master, Events Management & Business Tourism', 'INFA', '2013'],
     ['Bachelor, Business Tourism', 'INFA', '2011'],
     ['HND, Tourism Studies', 'ENC Paris Bessières', '2009']
   ],
@@ -27,7 +27,7 @@ window.CV = {
     {date:'2026', title:'Camp manager', company:'Feel the Flow', place:'', kind:'manage', description:'Runs camp operations, guests and crew.'},
     {date:'2022 - today', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Runs trips on the ground and works with local guides; five Kilimanjaro expeditions.'},
     {date:'2019 - today', title:'Ski instructor', company:'ESS Torgon & beyond', place:'Switzerland', kind:'ski', description:''},
-    {date:'2019 - 2020', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130.'},
+    {date:'2019 - today', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130.'},
     {date:'2018', title:'Guide & tour leader', company:'Corpoland', place:'Gdańsk, Poland', kind:'guide', description:''},
     {date:'2016 - 2018', title:'Team manager & guide', company:'Down Under Pedicab', place:'Darwin, Australia', kind:'manage', description:'Hired and ran the rider crew.'},
     {date:'2010 - 2015', title:'Project manager', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Corporate events and team building, from proposal and budget to on-site delivery.'}
