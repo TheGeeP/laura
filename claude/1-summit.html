@@ -139,9 +139,32 @@
     .page { box-shadow: none; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
+  /* Screen-only toolbar: back to gallery + print */
+  .cv-toolbar {
+    width: 210mm; max-width: 100%;
+    margin: 0 auto 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    font: 500 12px/1.4 system-ui, sans-serif;
+    color: #3a4150;
+  }
+  .cv-toolbar a { color: inherit; font-weight: 700; text-decoration: none; }
+  .cv-toolbar a:hover { text-decoration: underline; }
+  .cv-toolbar div { display: flex; align-items: center; gap: 14px; }
+  .cv-toolbar button {
+    background: #1B2250; color: #1B2250#3a4150; border: 0; border-radius: 7px;
+    padding: 9px 14px; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .cv-toolbar button:hover { filter: brightness(1.15); }
+  .cv-toolbar :focus-visible { outline: 3px solid #FFC145; outline-offset: 3px; }
+  @media (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
+  @media print { .cv-toolbar { display: none; } }
 </style>
 </head>
 <body>
+<nav class="cv-toolbar" aria-label="Design controls">
+  <a href="../index.html">← All designs</a>
+  <div><span>05 / Summit</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+</nav>
 <main class="page">
   <header class="sky">
     <svg class="stars" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
@@ -194,8 +217,8 @@
       <ol class="route" reversed>
         <li class="now">
           <div class="when">2026</div>
-          <div class="what">Camp manager &amp; ski instructor</div>
-          <p>Runs camp operations and teaches on the slopes all winter.</p>
+          <div class="what">Camp manager</div>
+          <div class="where">Feel the Flow</div>
         </li>
         <li>
           <div class="when">2022 — today</div>
@@ -204,9 +227,9 @@
           <p>Leads the logistics team for high-altitude trips, including five Kilimanjaro expeditions. </p>
         </li>
         <li>
-          <div class="when">Winter 2020</div>
+          <div class="when">2019 — today</div>
           <div class="what">Ski instructor</div>
-          <div class="where">ESS Torgon, Switzerland</div>
+          <div class="where">Winter seasons, starting at ESS Torgon, Switzerland</div>
         </li>
         <li>
           <div class="when">2019 — 2020</div>

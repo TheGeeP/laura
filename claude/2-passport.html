@@ -145,9 +145,32 @@
     .page { box-shadow: none; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
+  /* Screen-only toolbar: back to gallery + print */
+  .cv-toolbar {
+    width: 210mm; max-width: 100%;
+    margin: 0 auto 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    font: 500 12px/1.4 system-ui, sans-serif;
+    color: #fff;
+  }
+  .cv-toolbar a { color: inherit; font-weight: 700; text-decoration: none; }
+  .cv-toolbar a:hover { text-decoration: underline; }
+  .cv-toolbar div { display: flex; align-items: center; gap: 14px; }
+  .cv-toolbar button {
+    background: #fff; color: #fff#fff; border: 0; border-radius: 7px;
+    padding: 9px 14px; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .cv-toolbar button:hover { filter: brightness(1.15); }
+  .cv-toolbar :focus-visible { outline: 3px solid #FFC145; outline-offset: 3px; }
+  @media (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
+  @media print { .cv-toolbar { display: none; } }
 </style>
 </head>
 <body>
+<nav class="cv-toolbar" aria-label="Design controls">
+  <a href="../index.html">← All designs</a>
+  <div><span>06 / Passport</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+</nav>
 <main class="page">
   <section class="data">
     <div class="doc-title"><strong>Curriculum vitae</strong><span>Passport / Passeport / Paszport</span></div>
@@ -168,9 +191,9 @@
   <h2>Entries &amp; exits</h2>
   <div class="stamps">
     <div class="stamp s1">
-      <div class="t">Camp manager<br>+ ski instructor</div>
+      <div class="t">Camp manager</div>
       <div class="d">2026</div>
-      <p>Runs camp operations and teaches on the slopes all season.</p>
+      <p>Feel the Flow. Runs camp operations all season.</p>
     </div>
     <div class="stamp s2">
       <div class="t">Challenge tour leader</div>
@@ -184,8 +207,8 @@
     </div>
     <div class="stamp s4">
       <div class="t">Ski instructor</div>
-      <div class="d">Winter 2020</div>
-      <p>ESS Torgon, Switzerland</p>
+      <div class="d">2019 → today</div>
+      <p>Winter seasons, starting at ESS Torgon, Switzerland</p>
     </div>
     <div class="stamp s5">
       <div class="t">Guide &amp; tour leader</div>

@@ -127,9 +127,32 @@
     .page { box-shadow: none; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
+  /* Screen-only toolbar: back to gallery + print */
+  .cv-toolbar {
+    width: 210mm; max-width: 100%;
+    margin: 0 auto 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    font: 500 12px/1.4 system-ui, sans-serif;
+    color: #24346E;
+  }
+  .cv-toolbar a { color: inherit; font-weight: 700; text-decoration: none; }
+  .cv-toolbar a:hover { text-decoration: underline; }
+  .cv-toolbar div { display: flex; align-items: center; gap: 14px; }
+  .cv-toolbar button {
+    background: #FF48B0; color: #FF48B0#24346E; border: 0; border-radius: 7px;
+    padding: 9px 14px; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .cv-toolbar button:hover { filter: brightness(1.15); }
+  .cv-toolbar :focus-visible { outline: 3px solid #FFC145; outline-offset: 3px; }
+  @media (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
+  @media print { .cv-toolbar { display: none; } }
 </style>
 </head>
 <body>
+<nav class="cv-toolbar" aria-label="Design controls">
+  <a href="../index.html">← All designs</a>
+  <div><span>07 / Riso</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+</nav>
 <main class="page">
   <div class="dots y" aria-hidden="true"></div>
   <div class="dots p" aria-hidden="true"></div>
@@ -147,9 +170,9 @@
     <section>
       <h2>Work</h2>
       <ol class="jobs" reversed>
-        <li><div class="yr">2026</div><div><h3>Camp manager &amp; ski instructor</h3><p>Runs camp operations and teaches on the slopes through the season.</p></div></li>
+        <li><div class="yr">2026</div><div><h3>Camp manager <span class="at">Feel the Flow</span></h3><p>Runs camp operations and looks after guests and crew.</p></div></li>
         <li><div class="yr">2022 —</div><div><h3>Challenge tour leader <span class="at">4Challenge</span></h3><p>Mountain expeditions. Leads the logistics team; five Kilimanjaro tours so far.</p></div></li>
-        <li><div class="yr">2020</div><div><h3>Ski instructor <span class="at">ESS Torgon</span></h3><p>Winter season in the Swiss Alps.</p></div></li>
+        <li><div class="yr">2019 —</div><div><h3>Ski instructor <span class="at">ESS Torgon &amp; beyond</span></h3><p>Teaching every winter since 2019.</p></div></li>
         <li><div class="yr">2019</div><div><h3>Guide &amp; tour leader <span class="at">Adventures by Disney</span></h3><p>Seine river cruises and Paris, groups of up to 130.</p></div></li>
         <li><div class="yr">2018</div><div><h3>Guide &amp; tour leader <span class="at">Corpoland</span></h3><p>Gdańsk, Poland.</p></div></li>
         <li><div class="yr">2016</div><div><h3>Team manager &amp; guide <span class="at">Down Under Pedicab</span></h3><p>Darwin, Australia. Hired and ran the rider crew.</p></div></li>

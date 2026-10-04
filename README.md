@@ -7,7 +7,7 @@ Open `index.html` to compare all four. Each design also opens directly as a loca
 - `cv.js`: small shared rendering helper.
 - `assets/laura-portrait.png`: original portrait extracted from the supplied CV.
 
-The copy is an intentionally condensed design draft from the 2020 CV. The 130+ countries figure comes from the user's requested update. Dates are historical; nothing has been extended to the present. Replace the old portrait with a higher-resolution file when the content is updated.
+Copy is shared between `content.js` (designs 01–04) and the four self-contained pages in `claude/` (05–08); keep jobs, companies and dates aligned across both. Replace the old portrait with a higher-resolution file when possible.
 
 Use the Print / PDF button to export an A4 page. Enable background graphics and disable browser headers/footers in the print dialog. The toolbar does not print.
 
