@@ -13,4 +13,4 @@ Use the Print / PDF button to export an A4 page. Enable background graphics and 
 
 ## GitHub Pages
 
-This folder is a standalone static site. GitHub Pages serves the repository root from the `main` branch. Push updates to `main` to publish changes.
+This folder is a standalone static site. GitHub Pages serves the `gh-pages` branch, containing only this folder. The full project remains local. To publish updates from the repository root, commit the CV changes and run `git subtree push --prefix=cv-designs origin gh-pages`. Do not push the full `main` branch: it contains unrelated projects.
