@@ -99,8 +99,8 @@
   /* Stamps */
   .stamps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5mm 4mm;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5mm 3mm;
     align-items: center;
   }
   .stamp {
@@ -109,15 +109,15 @@
     border: 2.5px solid var(--c);
     outline: 1px solid var(--c);
     outline-offset: -6px;
-    padding: 4mm 4mm 3.5mm;
+    padding: 3.5mm 3mm 3mm;
     text-align: center;
     border-radius: 3mm;
     mix-blend-mode: multiply;
     position: relative;
   }
-  .stamp .t { font-family: "Rubik", sans-serif; font-weight: 900; font-size: 11pt; line-height: 1.1; text-transform: uppercase; letter-spacing: .02em; }
+  .stamp .t { font-family: "Rubik", sans-serif; font-weight: 900; font-size: 9.5pt; line-height: 1.1; text-transform: uppercase; letter-spacing: .02em; }
   .stamp .d { font-family: "Space Mono", monospace; font-size: 9pt; margin: 1.5mm 0; }
-  .stamp p { margin: 0; font-size: 8.5pt; color: var(--ink); }
+  .stamp p { margin: 0; font-size: 8pt; color: var(--ink); }
   .stamp.round { border-radius: 50%; width: 38mm; height: 38mm; display: flex; flex-direction: column; justify-content: center; padding: 4mm; }
   /* Kilimanjaro stamp pressed over the corner of the data page */
   .kili { --c: var(--teal); position: absolute; right: 14mm; top: 84mm; width: 33mm !important; height: 33mm !important; transform: rotate(-12deg); }
@@ -129,6 +129,7 @@
   .s4 { --c: var(--mustard); transform: rotate(3deg); }
   .s5 { --c: var(--green); transform: rotate(-2.5deg); }
   .s6 { --c: var(--coral); transform: rotate(1.5deg); border-style: dashed; }
+  .s7 { --c: var(--violet); transform: rotate(-1deg); border-style: dashed; }
 
   .bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; margin-top: 2mm; }
   .bottom ul { list-style: none; padding: 0; margin: 0; }

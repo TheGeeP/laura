@@ -22,12 +22,14 @@ window.CV = {
     ['HND, Tourism Studies', 'ENC Paris Bessières', '2009']
   ],
   // Newest first. `kind` colours the runs on the piste map: manage, expedition, ski, guide.
+  // Leave `description` empty when the title says it all; every design skips empty ones.
   jobs: [
     {date:'2026', title:'Camp manager', company:'Feel the Flow', place:'', kind:'manage', description:'Runs camp operations, guests and crew.'},
     {date:'2022 - today', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Runs trips on the ground and works with local guides; five Kilimanjaro expeditions.'},
-    {date:'2019 - today', title:'Ski instructor', company:'ESS Torgon & beyond', place:'Switzerland', kind:'ski', description:'Teaching every winter since 2019.'},
+    {date:'2019 - today', title:'Ski instructor', company:'ESS Torgon & beyond', place:'Switzerland', kind:'ski', description:''},
     {date:'2019 - 2020', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130.'},
-    {date:'2018', title:'Guide & tour leader', company:'Corpoland', place:'Gdańsk, Poland', kind:'guide', description:'Summer-season tour guiding.'},
-    {date:'2016 - 2018', title:'Team manager & guide', company:'Down Under Pedicab', place:'Darwin, Australia', kind:'manage', description:'Hired and ran the rider crew.'}
+    {date:'2018', title:'Guide & tour leader', company:'Corpoland', place:'Gdańsk, Poland', kind:'guide', description:''},
+    {date:'2016 - 2018', title:'Team manager & guide', company:'Down Under Pedicab', place:'Darwin, Australia', kind:'manage', description:'Hired and ran the rider crew.'},
+    {date:'2010 - 2015', title:'Project manager', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Corporate events and team building, from proposal and budget to on-site delivery.'}
   ]
 };
