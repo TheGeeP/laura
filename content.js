@@ -15,7 +15,7 @@ window.CV = {
     ['English', 'Fluent'], ['Spanish', 'Intermediate']
   ],
   strengths: ['Running trips on the ground', 'Group leadership', 'Ski instruction', 'Events for 500+ people'],
-  interests: ['Trekking & skiing', 'Snorkelling & yoga', 'Salsa & bachata'],
+  interests: ['Trekking', 'Skiing', 'Snorkelling', 'Yoga', 'Salsa & bachata', 'Cooking'],
   education: [
     ['Bachelor, Events Management & Business Tourism', 'INFA', '2013'],
     ['Bachelor, Business Tourism', 'INFA', '2011'],
