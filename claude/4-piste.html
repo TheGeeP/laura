@@ -93,7 +93,7 @@
   .side li { margin-bottom: 1.3mm; }
   .side li strong { display: inline-block; min-width: 16mm; }
 
-  @media (max-width: 820px) {
+  @media screen and (max-width: 820px) {
     body { padding: 0; }
     .page { width: 100%; min-height: 0; box-shadow: none; }
     .banner { flex-wrap: wrap; padding: 20px 16px; }
@@ -104,7 +104,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; }
+    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -124,11 +124,11 @@
   }
   .cv-toolbar button:hover { filter: brightness(1.15); }
   .cv-toolbar :focus-visible { outline: 3px solid #FFC145; outline-offset: 3px; }
-  @media (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
+  @media screen and (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
   @media print { .cv-toolbar { display: none; } }
 </style>
 </head>
-<body>
+<body data-design="piste">
 <nav class="cv-toolbar" aria-label="Design controls">
   <a href="../index.html">← All designs</a>
   <div><span>08 / Piste map</span><button type="button" onclick="window.print()">Print / PDF</button></div>
@@ -137,9 +137,9 @@
   <header class="banner">
     <img src="photo.jpg" alt="Laura Leiboff">
     <div>
-      <h1>Laura Leiboff</h1>
-      <p>Tour leader, expedition guide &amp; ski instructor</p>
-      <p class="contact">+33 6 81 80 34 09 &nbsp;/&nbsp; laura.l2@hotmail.fr &nbsp;/&nbsp; French</p>
+      <h1 data-cv="name"></h1>
+      <p data-cv="title"></p>
+      <p class="contact"><span data-cv="phone"></span> &nbsp;/&nbsp; <a data-cv="email"></a> &nbsp;/&nbsp; <span data-cv="nationality"></span></p>
     </div>
   </header>
 
@@ -161,20 +161,20 @@
 
     <!-- runs -->
     <g fill="none" stroke-width="6" stroke-linecap="round">
-      <path d="M180,125 C150,200 230,260 160,370" stroke="var(--red)"/>
-      <path d="M200,140 C260,210 220,290 290,370" stroke="var(--green)"/>
-      <path d="M380,90 C330,170 400,250 360,375" stroke="var(--green)"/>
-      <path d="M420,90 C480,170 430,260 480,375" stroke="var(--blue)"/>
-      <path d="M405,62 C560,140 520,240 600,370" stroke="var(--black)"/>
-      <path d="M640,110 C700,190 640,280 720,370" stroke="var(--red)"/>
+      <path data-run="1" d="M180,125 C150,200 230,260 160,370"/>
+      <path data-run="2" d="M200,140 C260,210 220,290 290,370"/>
+      <path data-run="3" d="M380,90 C330,170 400,250 360,375"/>
+      <path data-run="4" d="M420,90 C480,170 430,260 480,375"/>
+      <path data-run="5" d="M405,62 C560,140 520,240 600,370"/>
+      <path data-run="6" d="M640,110 C700,190 640,280 720,370"/>
     </g>
     <g stroke="#fff" stroke-width="2.5">
-      <circle cx="185" cy="234" r="13" fill="var(--red)"/>
-      <circle cx="241" cy="251" r="13" fill="var(--green)"/>
-      <circle cx="366" cy="216" r="13" fill="var(--green)"/>
-      <circle cx="454" cy="219" r="13" fill="var(--blue)"/>
-      <circle cx="530" cy="197" r="13" fill="var(--black)"/>
-      <circle cx="672" cy="236" r="13" fill="var(--red)"/>
+      <circle data-run="1" cx="185" cy="234" r="13"/>
+      <circle data-run="2" cx="241" cy="251" r="13"/>
+      <circle data-run="3" cx="366" cy="216" r="13"/>
+      <circle data-run="4" cx="454" cy="219" r="13"/>
+      <circle data-run="5" cx="530" cy="197" r="13"/>
+      <circle data-run="6" cx="672" cy="236" r="13"/>
     </g>
     <text class="num" x="185" y="234">1</text><text class="num" x="241" y="251">2</text><text class="num" x="366" y="216">3</text>
     <text class="num" x="454" y="219">4</text><text class="num" x="530" y="197">5</text><text class="num" x="672" y="236">6</text>
@@ -205,46 +205,33 @@
         <li><i class="r"></i>Team &amp; camp management</li>
         <li><i class="k"></i>Expeditions</li>
       </ul>
-      <ol class="runs">
-        <li><span class="mark r">1</span><div><h3>Team manager &amp; guide</h3><div class="meta">Down Under Pedicab, Darwin, Australia — 2016 to 2018</div><p>Hired and ran the rider crew.</p></div></li>
-        <li><span class="mark g">2</span><div><h3>Guide &amp; tour leader</h3><div class="meta">Corpoland, Gdańsk, Poland — 2018</div></div></li>
-        <li><span class="mark g">3</span><div><h3>Guide &amp; tour leader</h3><div class="meta">Adventures by Disney, Paris — 2019 to 2020</div><p>Seine river cruises and city tours, groups of up to 130.</p></div></li>
-        <li><span class="mark b">4</span><div><h3>Ski instructor</h3><div class="meta">Winter seasons since 2019, starting at ESS Torgon, Switzerland</div></div></li>
-        <li><span class="mark k">5</span><div><h3>Challenge tour leader</h3><div class="meta">4Challenge mountain expeditions — 2022 to today</div><p>Leads the logistics team; five Kilimanjaro tours and counting.</p></div></li>
-        <li><span class="mark r">6</span><div><h3>Camp manager</h3><div class="meta">Feel the Flow — 2026</div><p>Runs camp operations and looks after guests and crew.</p></div></li>
-      </ol>
+      <ol class="runs" data-jobs></ol>
     </section>
 
     <aside class="side">
-      <p class="about">I lead people up mountains and get them safely back down — from Kilimanjaro's summit to a Swiss ski school. Events-management trained, calm with big groups, at home in four languages.</p>
+      <p class="about" data-cv="intro"></p>
       <div class="board">
-        <div><b>130+</b><span>countries travelled</span></div>
-        <div><b>5×</b><span>Kilimanjaro</span></div>
-        <div><b>500+</b><span>people at one event</span></div>
-        <div><b>4</b><span>languages</span></div>
+        <div><b data-cv="countries"></b><span>countries travelled</span></div>
+        <div><b><span data-cv="kilimanjaro"></span>×</b><span>Kilimanjaro</span></div>
+        <div><b data-cv="eventSize"></b><span>people at one event</span></div>
+        <div><b data-cv="languagesCount"></b><span>languages</span></div>
       </div>
       <section>
         <h2>Languages</h2>
-        <ul>
-          <li><strong>French</strong> native</li>
-          <li><strong>Polish</strong> bilingual</li>
-          <li><strong>English</strong> fluent</li>
-          <li><strong>Spanish</strong> intermediate</li>
-        </ul>
+        <ul data-languages></ul>
       </section>
       <section>
         <h2>Education</h2>
-        <ul>
-          <li>Bachelor, Events Management &amp; Business Tourism, INFA — 2013</li>
-          <li>HND Tourism, ENC Bessières, Paris — 2009</li>
-        </ul>
+        <ul data-education></ul>
       </section>
       <section>
         <h2>Après-ski</h2>
-        <ul><li>Trekking, yoga, snorkelling, salsa &amp; bachata, cooking</li></ul>
+        <ul data-interests></ul>
       </section>
     </aside>
   </div>
 </main>
+<script src="../content.js"></script>
+<script src="render.js"></script>
 </body>
 </html>

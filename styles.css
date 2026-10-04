@@ -23,6 +23,6 @@
 .studio .intro-grid{display:block}.studio .travel-note{margin-top:12px}
 .atlas .sheet header{height:289px}.atlas .globe{width:205px;top:37px;right:45px}
 /* Six-job layouts: tighter rhythm so every design stays on one A4 page. */
-.editorial .job+.job{margin-top:17px}
+.editorial .job+.job{margin-top:13px}.editorial .intro{margin-bottom:22px}
 .atlas .sheet header{height:290px}.atlas main{padding-top:22px}.atlas .intro{margin-bottom:20px}.atlas .job+.job{margin-top:8px}.atlas .job:after{bottom:-8px}.atlas .bottom-grid{margin-top:22px}
 .studio header{min-height:180px}.studio .intro-grid{margin-top:16px}.studio .experience{margin-top:20px}.studio .job+.job{margin-top:8px}.studio .job-copy{padding-bottom:7px}

@@ -7,7 +7,7 @@ Open `index.html` to compare all four. Each design also opens directly as a loca
 - `cv.js`: small shared rendering helper.
 - `assets/laura-portrait.png`: original portrait extracted from the supplied CV.
 
-Copy is shared between `content.js` (designs 01–04) and the four self-contained pages in `claude/` (05–08); keep jobs, companies and dates aligned across both. Replace the old portrait with a higher-resolution file when possible.
+All copy for all eight designs lives in `content.js`. Designs 01–04 render it through `cv.js`; designs 05–08 in `claude/` render it through `claude/render.js`, which keeps each page's decoration (mountain, stamps, map) in its HTML. Replace the old portrait with a higher-resolution file when possible.
 
 Use the Print / PDF button to export an A4 page. Enable background graphics and disable browser headers/footers in the print dialog. The toolbar does not print.
 

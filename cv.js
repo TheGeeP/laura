@@ -10,7 +10,7 @@ const languages = () => `<section class="languages">${heading('Languages')}<dl>$
 const strengths = () => `<section class="strengths">${heading('What I bring')}<ul>${d.strengths.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></section>`;
 const interests = () => `<section class="interests">${heading('Beyond the itinerary')}<ul>${d.interests.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></section>`;
 const education = () => `<section class="education">${heading('Education')}<div>${d.education.map(([title,org,year])=>`<p><strong>${esc(title)}</strong><span>${esc(org)} · ${esc(year)}</span></p>`).join('')}</div></section>`;
-const jobs = () => `<section class="experience">${heading('Selected experience')}<div class="jobs">${d.jobs.map((j,i)=>`<article class="job"><div class="job-date"><span class="job-number">0${i+1}</span>${esc(j.date)}</div><div class="job-copy"><h3>${esc(j.title)}</h3><p class="company">${esc(j.company)} <span>· ${esc(j.place)}</span></p><p class="description">${esc(j.description)}</p></div></article>`).join('')}</div></section>`;
+const jobs = () => `<section class="experience">${heading('Selected experience')}<div class="jobs">${d.jobs.map((j,i)=>`<article class="job"><div class="job-date"><span class="job-number">0${i+1}</span>${esc(j.date)}</div><div class="job-copy"><h3>${esc(j.title)}</h3><p class="company">${esc(j.company)}${j.place?` <span>· ${esc(j.place)}</span>`:''}</p><p class="description">${esc(j.description)}</p></div></article>`).join('')}</div></section>`;
 const name = () => `<h1><span>${esc(d.firstName)}</span> <span>${esc(d.lastName)}</span></h1>`;
 const title = () => `<p class="role">${esc(d.title)}</p>`;
 const footer = () => `<footer><span>Laura Leiboff / Curriculum vitae</span></footer>`;

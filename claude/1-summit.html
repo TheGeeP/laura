@@ -95,7 +95,8 @@
     background: var(--paper); border: 3px solid var(--sunrise);
   }
   .route li.now::before { background: var(--sunrise); }
-  .when { font-weight: 600; color: var(--sunrise); font-size: 9pt; }
+  .route .meta { font-size: 9pt; }
+  .when { font-weight: 600; color: var(--sunrise); margin-right: 1.5mm; }
   .what { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: 11pt; margin: 0; }
   .where { color: var(--muted); }
   .route p { margin: .5mm 0 0; }
@@ -126,7 +127,7 @@
   .tags { display: flex; flex-wrap: wrap; gap: 1.5mm; }
   .tags span { background: #FFF1DB; color: #9A4A12; border-radius: 99px; padding: .6mm 2.6mm; font-size: 9pt; }
 
-  @media (max-width: 820px) {
+  @media screen and (max-width: 820px) {
     body { padding: 0; }
     .page { width: 100%; min-height: 0; box-shadow: none; }
     .body { grid-template-columns: 1fr; }
@@ -136,7 +137,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; }
+    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -156,11 +157,11 @@
   }
   .cv-toolbar button:hover { filter: brightness(1.15); }
   .cv-toolbar :focus-visible { outline: 3px solid #FFC145; outline-offset: 3px; }
-  @media (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
+  @media screen and (max-width: 820px) { .cv-toolbar { margin: 0; padding: 12px 16px; } .cv-toolbar span { display: none; } }
   @media print { .cv-toolbar { display: none; } }
 </style>
 </head>
-<body>
+<body data-design="summit">
 <nav class="cv-toolbar" aria-label="Design controls">
   <a href="../index.html">← All designs</a>
   <div><span>05 / Summit</span><button type="button" onclick="window.print()">Print / PDF</button></div>
@@ -177,9 +178,9 @@
     <div class="head">
       <img class="photo" src="photo.jpg" alt="Laura Leiboff">
       <div>
-        <h1>Laura<br>Leiboff</h1>
-        <p class="role">Tour leader &amp; mountain expedition guide</p>
-        <p class="contact">+33 6 81 80 34 09 &nbsp;/&nbsp; <a href="mailto:laura.l2@hotmail.fr">laura.l2@hotmail.fr</a> &nbsp;/&nbsp; French</p>
+        <h1><span data-cv="firstName"></span><br><span data-cv="lastName"></span></h1>
+        <p class="role" data-cv="title"></p>
+        <p class="contact"><span data-cv="phone"></span> &nbsp;/&nbsp; <a data-cv="email"></a> &nbsp;/&nbsp; <span data-cv="nationality"></span></p>
       </div>
     </div>
 
@@ -211,80 +212,38 @@
   <div class="body">
     <section>
       <h2>About</h2>
-      <p class="about">I lead people up mountains and get them safely back down. Since 2022 I've guided challenge expeditions — five of them on Kilimanjaro — and run the logistics team behind each climb. Trained in events management in Paris, I've run events for 500+ people, taught skiing in the Swiss Alps and managed crews on three continents.</p>
+      <p class="about" data-cv="about"></p>
 
       <h2>The route so far</h2>
-      <ol class="route" reversed>
-        <li class="now">
-          <div class="when">2026</div>
-          <div class="what">Camp manager</div>
-          <div class="where">Feel the Flow</div>
-        </li>
-        <li>
-          <div class="when">2022 — today</div>
-          <div class="what">Challenge tour leader, mountain expeditions</div>
-          <div class="where">4Challenge</div>
-          <p>Leads the logistics team for high-altitude trips, including five Kilimanjaro expeditions. </p>
-        </li>
-        <li>
-          <div class="when">2019 — today</div>
-          <div class="what">Ski instructor</div>
-          <div class="where">Winter seasons, starting at ESS Torgon, Switzerland</div>
-        </li>
-        <li>
-          <div class="when">2019 — 2020</div>
-          <div class="what">Guide &amp; tour leader</div>
-          <div class="where">Adventures by Disney, Paris</div>
-          <p>Seine river cruises and Paris tours for groups of up to 130 guests.</p>
-        </li>
-        <li>
-          <div class="when">2018</div>
-          <div class="what">Guide &amp; tour leader</div>
-          <div class="where">Corpoland, Gdańsk, Poland</div>
-        </li>
-        <li>
-          <div class="when">2016 — 2018</div>
-          <div class="what">Team manager &amp; guide</div>
-          <div class="where">Down Under Pedicab, Darwin, Australia</div>
-          <p>Hired and ran the rider crew; organised corporate bike cruises.</p>
-        </li>
-      </ol>
+      <ol class="route" reversed data-jobs></ol>
     </section>
 
     <aside class="side">
       <div class="stats">
-        <div class="stat"><b>130+</b><span>countries travelled</span></div>
-        <div class="stat"><b>5</b><span>Kilimanjaro expeditions</span></div>
-        <div class="stat"><b>500+</b><span>people at one event</span></div>
-        <div class="stat"><b>4</b><span>languages spoken</span></div>
+        <div class="stat"><b data-cv="countries"></b><span>countries travelled</span></div>
+        <div class="stat"><b data-cv="kilimanjaro"></b><span>Kilimanjaro expeditions</span></div>
+        <div class="stat"><b data-cv="eventSize"></b><span>people at one event</span></div>
+        <div class="stat"><b data-cv="languagesCount"></b><span>languages spoken</span></div>
       </div>
 
       <section>
         <h2>Languages</h2>
-        <ul class="langs">
-          <li>French <span class="bar"><i style="width:100%"></i></span><small>Native</small></li>
-          <li>Polish <span class="bar"><i style="width:95%"></i></span><small>Bilingual</small></li>
-          <li>English <span class="bar"><i style="width:85%"></i></span><small>Fluent</small></li>
-          <li>Spanish <span class="bar"><i style="width:60%"></i></span><small>Intermediate</small></li>
-        </ul>
+        <ul class="langs" data-languages></ul>
       </section>
 
       <section>
         <h2>Education</h2>
-        <ul class="plain">
-          <li><b>2013</b> Bachelor in Events Management &amp; Business Tourism, INFA Nogent-sur-Marne</li>
-          <li><b>2009</b> Higher National Diploma in Tourism, ENC Bessières, Paris</li>
-        </ul>
+        <ul class="plain" data-education></ul>
       </section>
 
       <section>
         <h2>Off the clock</h2>
-        <div class="tags">
-          <span>Trekking</span><span>Skiing</span><span>Yoga</span><span>Snorkelling</span><span>Salsa &amp; bachata</span><span>Cooking</span>
-        </div>
+        <div class="tags" data-interests></div>
       </section>
     </aside>
   </div>
 </main>
+<script src="../content.js"></script>
+<script src="render.js"></script>
 </body>
 </html>
