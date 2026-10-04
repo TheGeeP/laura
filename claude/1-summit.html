@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laura Leiboff — Summit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #1B2250;
+    --dusk: #4B3A8C;
+    --sunrise: #FF6B35;
+    --savanna: #FFC145;
+    --glacier: #A8DCEF;
+    --acacia: #2F7D59;
+    --ink: #1B2250;
+    --muted: #5A6185;
+    --paper: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #D9DCE8;
+    font-family: "Figtree", system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 9.5pt;
+    line-height: 1.4;
+    padding: 24px 16px;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 10px 40px rgba(27, 34, 80, .25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero: sunrise sky + mountain */
+  .sky {
+    position: relative;
+    background: linear-gradient(180deg, var(--night) 0%, var(--dusk) 38%, #C2477A 62%, var(--sunrise) 82%, var(--savanna) 100%);
+    color: #fff;
+    padding: 11mm 14mm 0;
+  }
+  .stars { position: absolute; inset: 0; pointer-events: none; }
+  .head { position: relative; display: flex; gap: 7mm; align-items: center; }
+  .photo {
+    width: 26mm; height: 26mm; border-radius: 50%;
+    object-fit: cover; border: 3px solid var(--savanna);
+    flex: none;
+  }
+  h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 40pt;
+    line-height: .9;
+    letter-spacing: -.02em;
+    margin: 0;
+  }
+  .role { font-size: 13pt; margin: 3mm 0 0; color: var(--glacier); font-weight: 500; }
+  .contact { margin: 2mm 0 0; font-size: 9.5pt; opacity: .85; }
+  .contact a { color: inherit; }
+
+  .mountain { display: block; width: calc(100% + 28mm); height: auto; margin: -24mm -14mm 0; position: relative; }
+  .mountain .camp-label { font-family: "Figtree", sans-serif; font-size: 13px; font-weight: 600; fill: #fff; }
+  .mountain .camp-year { font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; font-weight: 800; fill: var(--savanna); }
+
+  /* Body */
+  .body {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 8mm;
+    padding: 5mm 14mm 4mm;
+    flex: 1;
+  }
+  h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 13.5pt;
+    margin: 0 0 2.5mm;
+    color: var(--night);
+  }
+  .about { font-size: 10pt; margin: 0 0 5mm; }
+
+  .route { list-style: none; margin: 0; padding: 0; border-left: 3px dotted var(--sunrise); }
+  .route li { position: relative; padding: 0 0 3mm 6mm; }
+  .route li::before {
+    content: ""; position: absolute; left: -7px; top: 3px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--paper); border: 3px solid var(--sunrise);
+  }
+  .route li.now::before { background: var(--sunrise); }
+  .when { font-weight: 600; color: var(--sunrise); font-size: 9pt; }
+  .what { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: 11pt; margin: 0; }
+  .where { color: var(--muted); }
+  .route p { margin: .5mm 0 0; }
+
+  .side > section { margin-bottom: 5.5mm; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-bottom: 6mm; }
+  .stat {
+    border-radius: 3mm;
+    padding: 3mm;
+    color: #fff;
+  }
+  .stat:nth-child(1) { background: var(--sunrise); }
+  .stat:nth-child(2) { background: var(--dusk); }
+  .stat:nth-child(3) { background: var(--acacia); }
+  .stat:nth-child(4) { background: var(--night); }
+  .stat b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 22pt; line-height: 1; }
+  .stat span { font-size: 8.5pt; }
+
+  .langs { list-style: none; padding: 0; margin: 0; }
+  .langs li { display: grid; grid-template-columns: 15mm 1fr 19mm; align-items: center; gap: 2mm; margin-bottom: 1.4mm; }
+  .bar { height: 6px; border-radius: 3px; background: #E4E7F2; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--sunrise), var(--savanna)); }
+  .langs small { color: var(--muted); font-size: 8pt; }
+
+  .plain { list-style: none; padding: 0; margin: 0; }
+  .plain li { margin-bottom: 1.5mm; }
+  .plain b { color: var(--night); }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+  .tags span { background: #FFF1DB; color: #9A4A12; border-radius: 99px; padding: .6mm 2.6mm; font-size: 9pt; }
+
+  @media (max-width: 820px) {
+    body { padding: 0; }
+    .page { width: 100%; min-height: 0; box-shadow: none; }
+    .body { grid-template-columns: 1fr; }
+    h1 { font-size: 34pt; }
+    .head { flex-wrap: wrap; }
+  }
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: none; padding: 0; }
+    .page { box-shadow: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="sky">
+    <svg class="stars" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="#fff">
+        <circle cx="420" cy="30" r="1.4" opacity=".8"/><circle cx="520" cy="60" r="1"/><circle cx="610" cy="22" r="1.6"/>
+        <circle cx="700" cy="70" r="1" opacity=".7"/><circle cx="760" cy="30" r="1.3"/><circle cx="470" cy="95" r="1" opacity=".6"/>
+        <circle cx="660" cy="120" r="1.2" opacity=".6"/><circle cx="560" cy="140" r="1" opacity=".5"/><circle cx="740" cy="150" r="1" opacity=".5"/>
+      </g>
+    </svg>
+    <div class="head">
+      <img class="photo" src="photo.jpg" alt="Laura Leiboff">
+      <div>
+        <h1>Laura<br>Leiboff</h1>
+        <p class="role">Tour leader &amp; mountain expedition guide</p>
+        <p class="contact">+33 6 81 80 34 09 &nbsp;/&nbsp; <a href="mailto:laura.l2@hotmail.fr">laura.l2@hotmail.fr</a> &nbsp;/&nbsp; French</p>
+      </div>
+    </div>
+
+    <svg class="mountain" viewBox="0 0 800 300" aria-label="Career route drawn as a climb from 2016 to the 2026 summit">
+      <!-- back range -->
+      <path d="M0,300 L0,210 L90,170 L160,195 L250,140 L330,175 L410,120 L470,150 L540,95 L600,120 L680,70 L800,130 L800,300 Z" fill="#2A2F6B" opacity=".35"/>
+      <!-- main mountain -->
+      <path d="M0,300 L0,282 L40,272 L110,258 L170,240 L230,228 L300,205 L360,190 L420,165 L480,146 L560,112 L620,88 L700,52 L745,66 L800,96 L800,300 Z" fill="var(--night)"/>
+      <!-- snow cap -->
+      <path d="M640,80 L700,52 L745,66 L770,80 L752,86 L735,78 L718,92 L700,80 L682,94 L664,84 Z" fill="#fff"/>
+      <!-- route -->
+      <polyline points="40,272 170,240 300,205 420,165 560,112 700,52" fill="none" stroke="var(--savanna)" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+      <g fill="var(--savanna)" stroke="var(--night)" stroke-width="3">
+        <circle cx="40" cy="272" r="7"/><circle cx="170" cy="240" r="7"/><circle cx="300" cy="205" r="7"/>
+        <circle cx="420" cy="165" r="7"/><circle cx="560" cy="112" r="7"/>
+      </g>
+      <path d="M700,52 L700,14 L728,22 L700,30" fill="var(--sunrise)" stroke="#fff" stroke-width="2"/>
+      <g>
+        <text class="camp-year" x="30" y="245">2016</text><text class="camp-label" x="30" y="228">Darwin</text>
+        <text class="camp-year" x="150" y="213">2018</text><text class="camp-label" x="150" y="196">Gdańsk</text>
+        <text class="camp-year" x="270" y="178">2019</text><text class="camp-label" x="270" y="161">Paris</text>
+        <text class="camp-year" x="390" y="138">2020</text><text class="camp-label" x="390" y="121">Torgon</text>
+        <text class="camp-year" x="520" y="85">2022</text><text class="camp-label" x="520" y="68">Kilimanjaro</text>
+        <text class="camp-year" x="610" y="22">2026</text><text class="camp-label" x="568" y="42">5,895 m and up</text>
+      </g>
+    </svg>
+  </header>
+
+  <div class="body">
+    <section>
+      <h2>About</h2>
+      <p class="about">I lead people up mountains and get them safely back down. Since 2022 I've guided challenge expeditions — five of them on Kilimanjaro — and run the logistics team behind each climb. Trained in events management in Paris, I've led groups of up to 130 guests, taught skiing in the Swiss Alps and managed crews on three continents.</p>
+
+      <h2>The route so far</h2>
+      <ol class="route" reversed>
+        <li class="now">
+          <div class="when">2026</div>
+          <div class="what">Camp manager &amp; ski instructor</div>
+          <p>Runs camp operations and teaches on the slopes all winter.</p>
+        </li>
+        <li>
+          <div class="when">2022 — today</div>
+          <div class="what">Challenge tour leader, mountain expeditions</div>
+          <div class="where">4Challenge</div>
+          <p>Leads the logistics team for high-altitude trips, including five Kilimanjaro expeditions. </p>
+        </li>
+        <li>
+          <div class="when">Winter 2020</div>
+          <div class="what">Ski instructor</div>
+          <div class="where">ESS Torgon, Switzerland</div>
+        </li>
+        <li>
+          <div class="when">2019 — 2020</div>
+          <div class="what">Guide &amp; tour leader</div>
+          <div class="where">Adventures by Disney, Paris</div>
+          <p>Seine river cruises and Paris tours for groups of up to 130 guests.</p>
+        </li>
+        <li>
+          <div class="when">2018</div>
+          <div class="what">Guide &amp; tour leader</div>
+          <div class="where">Corpoland, Gdańsk, Poland</div>
+        </li>
+        <li>
+          <div class="when">2016 — 2018</div>
+          <div class="what">Team manager &amp; guide</div>
+          <div class="where">Down Under Pedicab, Darwin, Australia</div>
+          <p>Hired and ran the rider crew; organised corporate bike cruises.</p>
+        </li>
+      </ol>
+    </section>
+
+    <aside class="side">
+      <div class="stats">
+        <div class="stat"><b>130+</b><span>countries travelled</span></div>
+        <div class="stat"><b>5</b><span>Kilimanjaro expeditions</span></div>
+        <div class="stat"><b>130</b><span>guests in one group</span></div>
+        <div class="stat"><b>4</b><span>languages spoken</span></div>
+      </div>
+
+      <section>
+        <h2>Languages</h2>
+        <ul class="langs">
+          <li>French <span class="bar"><i style="width:100%"></i></span><small>Native</small></li>
+          <li>Polish <span class="bar"><i style="width:95%"></i></span><small>Bilingual</small></li>
+          <li>English <span class="bar"><i style="width:85%"></i></span><small>Fluent</small></li>
+          <li>Spanish <span class="bar"><i style="width:60%"></i></span><small>Intermediate</small></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul class="plain">
+          <li><b>2013</b> Bachelor in Events Management &amp; Business Tourism, INFA Nogent-sur-Marne</li>
+          <li><b>2009</b> Higher National Diploma in Tourism, ENC Bessières, Paris</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Off the clock</h2>
+        <div class="tags">
+          <span>Trekking</span><span>Skiing</span><span>Yoga</span><span>Snorkelling</span><span>Salsa &amp; bachata</span><span>Cooking</span>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

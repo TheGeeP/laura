@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laura Leiboff — Passport</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Rubik:wght@500;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page: #DCEFE8;
+    --guilloche: #9CCFC0;
+    --cover: #7A1F3D;
+    --coral: #E8505B;
+    --teal: #127C8A;
+    --violet: #6A3FA0;
+    --mustard: #E59E0B;
+    --green: #2E8B3D;
+    --ink: #17323A;
+    --muted: #4C6A70;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cover);
+    font-family: "Familjen Grotesk", system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 10pt;
+    line-height: 1.45;
+    padding: 24px 16px;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 13mm;
+    background-color: var(--page);
+    background-image:
+      repeating-radial-gradient(circle at 15% 20%, transparent 0 9px, rgba(156,207,192,.45) 9px 10px),
+      repeating-radial-gradient(circle at 85% 80%, transparent 0 13px, rgba(255,255,255,.55) 13px 14px);
+    box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    position: relative;
+  }
+
+  /* Data page */
+  .data {
+    background: rgba(255,255,255,.72);
+    border: 1.5px solid var(--guilloche);
+    border-radius: 4mm;
+    padding: 6mm;
+    display: grid;
+    grid-template-columns: 34mm 1fr;
+    gap: 6mm;
+  }
+  .doc-title {
+    grid-column: 1 / -1;
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1.5px solid var(--guilloche);
+    padding-bottom: 2.5mm;
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .doc-title strong { font-family: "Rubik", sans-serif; font-weight: 900; font-size: 15pt; color: var(--cover); }
+  .photo {
+    width: 34mm; height: 44mm; object-fit: cover;
+    border-radius: 2mm;
+    filter: saturate(1.1);
+  }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 6mm; align-content: start; }
+  .field small { display: block; color: var(--muted); font-size: 7.5pt; }
+  .field span { font-weight: 600; font-size: 11pt; }
+  .field.wide { grid-column: 1 / -1; }
+  h1 {
+    font-family: "Rubik", sans-serif; font-weight: 900;
+    font-size: 30pt; line-height: 1; margin: 0; color: var(--ink);
+  }
+  .mrz {
+    grid-column: 1 / -1;
+    font-family: "Space Mono", monospace;
+    font-size: 10pt;
+    letter-spacing: .14em;
+    color: var(--ink);
+    background: rgba(255,255,255,.8);
+    padding: 2mm 3mm;
+    border-radius: 1.5mm;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+  }
+
+  .about { font-size: 11pt; margin: 6mm 0 2mm; max-width: 165mm; }
+
+  h2 {
+    font-family: "Rubik", sans-serif; font-weight: 700;
+    font-size: 14pt; color: var(--cover);
+    margin: 6mm 0 3mm;
+  }
+
+  /* Stamps */
+  .stamps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5mm 4mm;
+    align-items: center;
+  }
+  .stamp {
+    --c: var(--teal);
+    color: var(--c);
+    border: 2.5px solid var(--c);
+    outline: 1px solid var(--c);
+    outline-offset: -6px;
+    padding: 4mm 4mm 3.5mm;
+    text-align: center;
+    border-radius: 3mm;
+    mix-blend-mode: multiply;
+    position: relative;
+  }
+  .stamp .t { font-family: "Rubik", sans-serif; font-weight: 900; font-size: 11pt; line-height: 1.1; text-transform: uppercase; letter-spacing: .02em; }
+  .stamp .d { font-family: "Space Mono", monospace; font-size: 9pt; margin: 1.5mm 0; }
+  .stamp p { margin: 0; font-size: 8.5pt; color: var(--ink); }
+  .stamp.round { border-radius: 50%; width: 38mm; height: 38mm; justify-self: center; display: flex; flex-direction: column; justify-content: center; padding: 4mm; }
+  .s1 { --c: var(--coral); transform: rotate(-3deg); }
+  .s2 { --c: var(--violet); transform: rotate(2deg); }
+  .s3 { --c: var(--teal); transform: rotate(-1.5deg); }
+  .s4 { --c: var(--mustard); transform: rotate(3deg); }
+  .s5 { --c: var(--green); transform: rotate(-2.5deg); }
+  .s6 { --c: var(--coral); transform: rotate(1.5deg); border-style: dashed; }
+
+  .bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; margin-top: 2mm; }
+  .bottom ul { list-style: none; padding: 0; margin: 0; }
+  .bottom li { margin-bottom: 1.4mm; }
+  .bottom li b { color: var(--teal); }
+
+
+  @media (max-width: 820px) {
+    body { padding: 0; }
+    .page { width: 100%; min-height: 0; padding: 16px; }
+    .data { grid-template-columns: 1fr; }
+    .fields { grid-template-columns: 1fr; }
+    .stamps, .bottom { grid-template-columns: 1fr 1fr; }
+  }
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: none; padding: 0; }
+    .page { box-shadow: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="data">
+    <div class="doc-title"><strong>Curriculum vitae</strong><span>Passport / Passeport / Paszport</span></div>
+    <img class="photo" src="photo.jpg" alt="Laura Leiboff">
+    <div class="fields">
+      <div class="field wide"><small>Surname / Given name</small><h1>Laura Leiboff</h1></div>
+      <div class="field wide"><small>Profession</small><span>Tour leader &amp; mountain expedition guide</span></div>
+      <div class="field"><small>Nationality</small><span>French</span></div>
+      <div class="field"><small>Countries visited</small><span>130+</span></div>
+      <div class="field"><small>Phone</small><span>+33 6 81 80 34 09</span></div>
+      <div class="field"><small>Email</small><span>laura.l2@hotmail.fr</span></div>
+    </div>
+    <div class="mrz" aria-hidden="true">P&lt;FRALEIBOFF&lt;&lt;LAURA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>TOURLEADER&lt;KILIMANJARO&lt;130COUNTRIES&lt;&lt;&lt;&lt;&lt;&lt;</div>
+  </section>
+
+  <p class="about">I lead people up mountains and get them safely back down. Since 2022 I've guided challenge expeditions — five of them on Kilimanjaro — and run the logistics team behind each climb. Trained in events management in Paris, I've led groups of up to 130 guests, taught skiing in the Swiss Alps and managed crews on three continents.</p>
+
+  <h2>Entries &amp; exits</h2>
+  <div class="stamps">
+    <div class="stamp s1">
+      <div class="t">Camp manager<br>+ ski instructor</div>
+      <div class="d">2026</div>
+      <p>Runs camp operations and teaches on the slopes all season.</p>
+    </div>
+    <div class="stamp s2">
+      <div class="t">Challenge tour leader</div>
+      <div class="d">2022 → today</div>
+      <p>4Challenge mountain expeditions. Heads the logistics team; five Kilimanjaro tours.</p>
+    </div>
+    <div class="stamp s3 round">
+      <div class="t">Kilimanjaro</div>
+      <div class="d">5,895 m · ×5</div>
+      <p>Tanzania</p>
+    </div>
+    <div class="stamp s4">
+      <div class="t">Ski instructor</div>
+      <div class="d">Winter 2020</div>
+      <p>ESS Torgon, Switzerland</p>
+    </div>
+    <div class="stamp s5">
+      <div class="t">Guide &amp; tour leader</div>
+      <div class="d">2019 → 2020</div>
+      <p>Adventures by Disney — Seine cruises and Paris, groups up to 130.</p>
+    </div>
+    <div class="stamp s6">
+      <div class="t">Tour leader · Team manager</div>
+      <div class="d">2016 → 2018</div>
+      <p>Corpoland, Gdańsk · Down Under Pedicab, Darwin</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <section>
+      <h2>Languages</h2>
+      <ul>
+        <li><b>French</b> native</li>
+        <li><b>Polish</b> bilingual</li>
+        <li><b>English</b> fluent</li>
+        <li><b>Spanish</b> intermediate</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><b>2013</b> Bachelor, Events Management &amp; Business Tourism — INFA</li>
+        <li><b>2009</b> HND Tourism — ENC Bessières, Paris</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Interests</h2>
+      <ul>
+        <li>Trekking &amp; skiing</li>
+        <li>Yoga &amp; snorkelling</li>
+        <li>Salsa, bachata, cooking</li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
+</html>
