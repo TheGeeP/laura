@@ -22,7 +22,7 @@ window.CV_CONTENT = {
     interests: ['Trekking', 'Skiing', 'Snorkelling', 'Yoga', 'Salsa & bachata', 'Cooking'],
     education: [
       ['Master, Events Management & Business Tourism', 'INFA', '2013'],
-      ['Bachelor, Business Tourism', 'INFA', '2011'],
+      ['Licence, Business Tourism', 'INFA', '2011'],
       ['HND, Tourism Studies', 'ENC Paris Bessières', '2009']
     ],
     // Newest first. `to`: 'now' for ongoing, omitted for a single year.
@@ -30,8 +30,8 @@ window.CV_CONTENT = {
     // Leave `description` empty when the title says it all; every design skips empty ones.
     jobs: [
       {from:'2026', title:'Camp manager', company:'Feel the Flow', place:'', kind:'manage', description:'Camp operations, guest welcome and team management.'},
-      {from:'2022', to:'now', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Group support and liaison with local guides; five Kilimanjaro trips.'},
-      {from:'2019', to:'now', title:'Ski instructor', company:'Started at ESS Torgon', place:'Switzerland', kind:'ski', description:''},
+      {from:'2022', to:'now', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Group logistics management; five Kilimanjaro trips.'},
+      {from:'2019', to:'now', title:'Ski instructor', company:'ESS Torgon', place:'Switzerland', kind:'ski', description:''},
       {from:'2019', to:'now', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130 guests.'},
       {from:'2018', title:'Guide & tour leader', company:'Corpoland', place:'Gdańsk, Poland', kind:'guide', description:''},
       {from:'2016', to:'2018', title:'Team manager & guide', company:'Down Under Pedicab', place:'Darwin, Australia', kind:'manage', description:'Hired and ran the rider crew.'},
@@ -85,17 +85,17 @@ window.CV_CONTENT = {
     interests: ['Randonnée', 'Ski', 'Snorkeling', 'Yoga', 'Salsa & bachata', 'Cuisine'],
     education: [
       ['Master en management événementiel et tourisme d’affaires', 'INFA', '2013'],
-      ['Bachelor en tourisme d’affaires', 'INFA', '2011'],
+      ['Licence en tourisme d’affaires', 'INFA', '2011'],
       ['BTS Tourisme', 'ENC Paris Bessières', '2009']
     ],
     jobs: [
       {from:'2026', title:'Responsable de camp', company:'Feel the Flow', place:'', kind:'manage', description:'Gestion du camp, accueil des participants et encadrement de l’équipe.'},
-      {from:'2022', to:'now', title:'Tour leader', company:'4Challenge', place:'Expéditions en montagne', kind:'expedition', description:'Suivi des groupes et liaison avec les guides locaux ; cinq voyages au Kilimandjaro.'},
-      {from:'2019', to:'now', title:'Monitrice de ski', company:'Débuts à ESS Torgon', place:'Suisse', kind:'ski', description:''},
+      {from:'2022', to:'now', title:'Tour leader', company:'4Challenge', place:'Expéditions en montagne', kind:'expedition', description:'Gestion de la logistique du groupe ; cinq voyages au Kilimandjaro.'},
+      {from:'2019', to:'now', title:'Monitrice de ski', company:'ESS Torgon', place:'Suisse', kind:'ski', description:''},
       {from:'2019', to:'now', title:'Guide & accompagnatrice', company:'Adventures by Disney', place:'Paris & la Seine', kind:'guide', description:'Croisières sur la Seine et visites de Paris, groupes jusqu’à 130 personnes.'},
       {from:'2018', title:'Guide & accompagnatrice', company:'Corpoland', place:'Gdańsk, Pologne', kind:'guide', description:''},
       {from:'2016', to:'2018', title:'Responsable d\'équipe & guide', company:'Down Under Pedicab', place:'Darwin, Australie', kind:'manage', description:'Recrutement et encadrement de l\'équipe.'},
-      {from:'2010', to:'2015', title:'Cheffe de projet', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Événements d’entreprise et team building : conception, budgets et coordination sur place.'}
+      {from:'2010', to:'2015', title:'Chef de projets', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Événements d’entreprise et team building : conception, budgets et coordination sur place.'}
     ],
     labels: {
       now: 'aujourd\'hui', switchTo: 'English', allDesigns: '← Tous les designs', print: 'Imprimer / PDF',
