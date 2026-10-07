@@ -31,3 +31,8 @@
 .atlas main{padding-bottom:60px}.atlas .job+.job{margin-top:7px}.atlas .job:after{bottom:-7px}
 .field main{padding-bottom:60px}.field .job+.job{margin-top:18px}
 .studio .sheet{padding-bottom:60px}.studio .job+.job{margin-top:6px}
+
+/* French copy needs a little less vertical spacing, without reducing type size. */
+html[lang="fr"] .editorial .job+.job{margin-top:8px}
+html[lang="fr"] .editorial .education{margin-top:20px}
+html[lang="fr"] .field .job+.job{margin-top:16px}

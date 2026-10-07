@@ -5,10 +5,9 @@
   const esc = x => String(x).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fill = (sel, html) => document.querySelectorAll(sel).forEach(el => { el.innerHTML = html; });
   const range = (j, sep) => esc(j.date.replace(' - ', sep));
-  const start = j => esc(j.date.split(' - ')[0]);
   const at = j => esc([j.company, j.place].filter(Boolean).join(', '));
   const desc = j => j.description ? `<p>${esc(j.description)}</p>` : '';
-  const values = { ...d, languagesCount: d.languages.length };
+  const values = { ...d, languagesCount: d.languages.length, skiStart: d.jobs.find(j => j.kind === 'ski').from };
 
   // Single values: <span data-cv="countries"></span>; an <a data-cv="email"> also gets its mailto.
   document.querySelectorAll('[data-cv]').forEach(el => {
@@ -39,7 +38,7 @@
   }
 
   if (design === 'riso') {
-    fill('[data-jobs]', d.jobs.map(j => `<li><div class="yr">${start(j)}${j.to === 'now' ? ' —' : ''}</div>
+    fill('[data-jobs]', d.jobs.map(j => `<li><div class="yr">${esc(j.from)}${j.to ? `<span class="date-end">– ${esc(j.to === 'now' ? d.labels.now : j.to)}</span>` : ''}</div>
       <div><h3>${esc(j.title)} <span class="at">${esc(j.company)}</span></h3>${desc(j)}</div></li>`).join(''));
     fill('[data-languages]', d.languages.map(([l, lvl]) => `<li><b>${esc(l)}</b> ${esc(lvl.toLowerCase())}</li>`).join(''));
     fill('[data-education]', d.education.map(([t, org, y]) => `<li>${esc(t)}, ${esc(org)} — ${esc(y)}</li>`).join(''));

@@ -11,8 +11,8 @@ window.CV_CONTENT = {
     kilimanjaro: '5',
     eventSize: '500+',
     // Short version for tighter layouts; `about` for designs with room for more.
-    intro: 'I lead groups up mountains and get them safely back down: five Kilimanjaro expeditions since 2022, events for 500+ people and a ski season every winter since 2019.',
-    about: 'I lead groups up mountains and get them safely back down. Since 2022 I\'ve run challenge expeditions on the ground, five of them on Kilimanjaro, as the group\'s point of contact and the link to local guides and crews. Trained in events management in Paris, I\'ve run events for 500+ people, taught skiing every winter since 2019 and managed teams on three continents.',
+    intro: 'Tour leader since 2022, supporting groups and liaising with local guides: five Kilimanjaro trips, events for over 500 people and ski instruction since 2019.',
+    about: 'Since 2022, I have coordinated mountain trips on the ground, including five to Kilimanjaro. I am the group’s point of contact and liaise with local guides and crews. Trained in events management in Paris, I have organised events for over 500 people, taught skiing every winter since 2019 and managed teams on three continents.',
     // [language, level, bar width % used by Summit]
     languages: [
       ['French', 'Native', 100], ['Polish', 'Bilingual', 95],
@@ -29,10 +29,10 @@ window.CV_CONTENT = {
     // `kind` colours the runs on the piste map: manage, expedition, ski, guide.
     // Leave `description` empty when the title says it all; every design skips empty ones.
     jobs: [
-      {from:'2026', title:'Camp manager', company:'Feel the Flow', place:'', kind:'manage', description:'Runs camp operations, guests and crew.'},
-      {from:'2022', to:'now', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Runs trips on the ground and works with local guides; five Kilimanjaro expeditions.'},
-      {from:'2019', to:'now', title:'Ski instructor', company:'ESS Torgon & beyond', place:'Switzerland', kind:'ski', description:''},
-      {from:'2019', to:'now', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130.'},
+      {from:'2026', title:'Camp manager', company:'Feel the Flow', place:'', kind:'manage', description:'Camp operations, guest welcome and team management.'},
+      {from:'2022', to:'now', title:'Challenge tour leader', company:'4Challenge', place:'Mountain expeditions', kind:'expedition', description:'Group support and liaison with local guides; five Kilimanjaro trips.'},
+      {from:'2019', to:'now', title:'Ski instructor', company:'Started at ESS Torgon', place:'Switzerland', kind:'ski', description:''},
+      {from:'2019', to:'now', title:'Guide & tour leader', company:'Adventures by Disney', place:'Paris & the Seine', kind:'guide', description:'Seine cruises and Paris tours, groups of up to 130 guests.'},
       {from:'2018', title:'Guide & tour leader', company:'Corpoland', place:'Gdańsk, Poland', kind:'guide', description:''},
       {from:'2016', to:'2018', title:'Team manager & guide', company:'Down Under Pedicab', place:'Darwin, Australia', kind:'manage', description:'Hired and ran the rider crew.'},
       {from:'2010', to:'2015', title:'Project manager', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Corporate events and team building, from proposal and budget to on-site delivery.'}
@@ -75,27 +75,27 @@ window.CV_CONTENT = {
     countries: '130+',
     kilimanjaro: '5',
     eventSize: '500+',
-    intro: 'J\'emmène des groupes en montagne et je les ramène en sécurité : cinq expéditions au Kilimandjaro depuis 2022, des événements pour 500+ personnes et une saison de ski chaque hiver depuis 2019.',
-    about: 'J\'emmène des groupes en montagne et je les ramène en sécurité. Depuis 2022, je gère des expéditions sur le terrain, dont cinq au Kilimandjaro, comme référente du groupe et lien avec les guides et équipes locales. Formée au management événementiel à Paris, j\'ai organisé des événements pour 500+ personnes, j\'enseigne le ski chaque hiver depuis 2019 et j\'ai encadré des équipes sur trois continents.',
+    intro: 'Tour leader depuis 2022, référente des groupes et interlocutrice des guides locaux : cinq voyages au Kilimandjaro, des événements de plus de 500 personnes et l’enseignement du ski depuis 2019.',
+    about: 'Depuis 2022, je coordonne des séjours en montagne sur le terrain, dont cinq au Kilimandjaro. Référente du groupe, j’assure la liaison avec les guides et les équipes locales. Formée à l’événementiel à Paris, j’ai organisé des événements de plus de 500 personnes, enseigné le ski chaque hiver depuis 2019 et encadré des équipes sur trois continents.',
     languages: [
       ['Français', 'Langue maternelle', 100], ['Polonais', 'Bilingue', 95],
       ['Anglais', 'Courant', 85], ['Espagnol', 'Intermédiaire', 60]
     ],
-    strengths: ['Gestion de voyages sur le terrain', 'Encadrement de groupes', 'Enseignement du ski', 'Événements de 500+ personnes'],
+    strengths: ['Gestion de voyages sur le terrain', 'Encadrement de groupes', 'Enseignement du ski', 'Événements de plus de 500 personnes'],
     interests: ['Randonnée', 'Ski', 'Snorkeling', 'Yoga', 'Salsa & bachata', 'Cuisine'],
     education: [
-      ['Master, Management événementiel & tourisme d\'affaires', 'INFA', '2013'],
-      ['Licence, Tourisme d\'affaires', 'INFA', '2011'],
+      ['Master en management événementiel et tourisme d’affaires', 'INFA', '2013'],
+      ['Bachelor en tourisme d’affaires', 'INFA', '2011'],
       ['BTS Tourisme', 'ENC Paris Bessières', '2009']
     ],
     jobs: [
-      {from:'2026', title:'Responsable de camp', company:'Feel the Flow', place:'', kind:'manage', description:'Gère le camp, les clients et l\'équipe.'},
-      {from:'2022', to:'now', title:'Accompagnatrice d\'expéditions', company:'4Challenge', place:'Expéditions en montagne', kind:'expedition', description:'Gère les voyages sur le terrain avec les guides locaux ; cinq expéditions au Kilimandjaro.'},
-      {from:'2019', to:'now', title:'Monitrice de ski', company:'ESS Torgon & ailleurs', place:'Suisse', kind:'ski', description:''},
-      {from:'2019', to:'now', title:'Guide & accompagnatrice', company:'Adventures by Disney', place:'Paris & la Seine', kind:'guide', description:'Croisières sur la Seine et visites de Paris, groupes jusqu\'à 130.'},
+      {from:'2026', title:'Responsable de camp', company:'Feel the Flow', place:'', kind:'manage', description:'Gestion du camp, accueil des participants et encadrement de l’équipe.'},
+      {from:'2022', to:'now', title:'Tour leader', company:'4Challenge', place:'Expéditions en montagne', kind:'expedition', description:'Suivi des groupes et liaison avec les guides locaux ; cinq voyages au Kilimandjaro.'},
+      {from:'2019', to:'now', title:'Monitrice de ski', company:'Débuts à ESS Torgon', place:'Suisse', kind:'ski', description:''},
+      {from:'2019', to:'now', title:'Guide & accompagnatrice', company:'Adventures by Disney', place:'Paris & la Seine', kind:'guide', description:'Croisières sur la Seine et visites de Paris, groupes jusqu’à 130 personnes.'},
       {from:'2018', title:'Guide & accompagnatrice', company:'Corpoland', place:'Gdańsk, Pologne', kind:'guide', description:''},
       {from:'2016', to:'2018', title:'Responsable d\'équipe & guide', company:'Down Under Pedicab', place:'Darwin, Australie', kind:'manage', description:'Recrutement et encadrement de l\'équipe.'},
-      {from:'2010', to:'2015', title:'Cheffe de projet', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Événements d\'entreprise et team building, du budget à la gestion sur place.'}
+      {from:'2010', to:'2015', title:'Cheffe de projet', company:'Liberty Incentives & Team Tonic Services', place:'Paris, France', kind:'manage', description:'Événements d’entreprise et team building : conception, budgets et coordination sur place.'}
     ],
     labels: {
       now: 'aujourd\'hui', switchTo: 'English', allDesigns: '← Tous les designs', print: 'Imprimer / PDF',
@@ -103,8 +103,8 @@ window.CV_CONTENT = {
       strengths: 'Mes atouts', interests: 'Centres d\'intérêt', travelNote: '{n} pays visités',
       countriesTravelled: 'pays visités', countriesVisited: 'Pays visités',
       kiliExpeditions: 'expéditions au Kilimandjaro', kilimanjaro: 'Kilimandjaro', kiboHeight: '5 895 m',
-      eventPeople: 'personnes sur un événement', languagesSpoken: 'langues parlées', languagesShort: 'langues',
-      editorialEyebrow: 'Tour leader / Expéditions / Monitrice de ski', atlasEyebrow: 'Des gens. Des lieux. Des possibles.',
+      eventPeople: 'participants par événement', languagesSpoken: 'langues parlées', languagesShort: 'langues',
+      editorialEyebrow: 'Tour leader / Expéditions / Monitrice de ski', atlasEyebrow: 'Des rencontres. Des lieux. Des horizons.',
       fieldSignoff: 'Curieuse de nature.', fieldInterests: 'Au-delà de l\'itinéraire', studioHeading: 'En montagne, autour du monde',
       summitRoute: 'Le parcours', summitPeak: '5 895 m et plus', summitInterests: 'Temps libre',
       passportName: 'Nom / Prénom', passportProfession: 'Profession', passportNationality: 'Nationalité',
@@ -114,7 +114,7 @@ window.CV_CONTENT = {
       pisteRuns: 'Pistes, par ordre de descente', pisteGuide: 'Accompagnement', pisteSki: 'Enseignement du ski',
       pisteManage: 'Gestion d\'équipe & de camp', pisteExpedition: 'Expéditions', pisteInterests: 'Après-ski',
       galleryTitle: 'Un CV, huit styles.',
-      galleryIntro: 'Accompagnatrice d\'expéditions en montagne et monitrice de ski. Ouvrez un design pour le voir en grand ou l\'enregistrer en PDF.',
+      galleryIntro: 'Tour leader pour des séjours en montagne et monitrice de ski. Ouvrez un design pour le voir en grand ou l\'enregistrer en PDF.',
       d1: 'Éditorial terracotta', d1Text: 'Chaleureux, personnel, un peu magazine.',
       d2: 'Atlas cobalt', d2Text: 'Typographie affirmée, bleu vif et une chronologie claire.',
       d3: 'Carnet forestier', d3Text: 'Ancré, nature et discrètement aventureux.',
