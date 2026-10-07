@@ -16,7 +16,6 @@
     if (el.tagName === 'A' && el.dataset.cv === 'email') el.href = `mailto:${d.email}`;
   });
 
-  const levelWidth = { Native: 100, Bilingual: 95, Fluent: 85, Intermediate: 60 };
   const kindColor = { guide: 'var(--green)', ski: 'var(--blue)', manage: 'var(--red)', expedition: 'var(--black)' };
   const kindClass = { guide: 'g', ski: 'b', manage: 'r', expedition: 'k' };
 
@@ -24,8 +23,8 @@
     fill('[data-jobs]', d.jobs.map((j, i) => `<li${i ? '' : ' class="now"'}>
       <div class="meta"><span class="when">${range(j, ' — ')}</span> <span class="where">${at(j)}</span></div>
       <div class="what">${esc(j.title)}</div>${desc(j)}</li>`).join(''));
-    fill('[data-languages]', d.languages.map(([l, lvl]) =>
-      `<li>${esc(l)} <span class="bar"><i style="width:${levelWidth[lvl] || 50}%"></i></span><small>${esc(lvl)}</small></li>`).join(''));
+    fill('[data-languages]', d.languages.map(([l, lvl, pct]) =>
+      `<li>${esc(l)} <span class="bar"><i style="width:${pct}%"></i></span><small>${esc(lvl)}</small></li>`).join(''));
     fill('[data-education]', d.education.map(([t, org, y]) => `<li><b>${esc(y)}</b> ${esc(t)}, ${esc(org)}</li>`).join(''));
     fill('[data-interests]', d.interests.map(x => `<span>${esc(x)}</span>`).join(''));
   }
@@ -36,11 +35,11 @@
       <p>${esc([j.company, j.description].filter(Boolean).join('. '))}</p></div>`).join(''));
     fill('[data-languages]', d.languages.map(([l, lvl]) => `<li><b>${esc(l)}</b> ${esc(lvl.toLowerCase())}</li>`).join(''));
     fill('[data-education]', d.education.map(([t, org, y]) => `<li><b>${esc(y)}</b> ${esc(t)} — ${esc(org)}</li>`).join(''));
-    fill('[data-interests]', d.interests.map(x => `<li>${esc(x)}</li>`).join(''));
+    fill('[data-interests]', `<li>${d.interests.map(esc).join(', ')}</li>`);
   }
 
   if (design === 'riso') {
-    fill('[data-jobs]', d.jobs.map(j => `<li><div class="yr">${start(j)}${j.date.endsWith('today') ? ' —' : ''}</div>
+    fill('[data-jobs]', d.jobs.map(j => `<li><div class="yr">${start(j)}${j.to === 'now' ? ' —' : ''}</div>
       <div><h3>${esc(j.title)} <span class="at">${esc(j.company)}</span></h3>${desc(j)}</div></li>`).join(''));
     fill('[data-languages]', d.languages.map(([l, lvl]) => `<li><b>${esc(l)}</b> ${esc(lvl.toLowerCase())}</li>`).join(''));
     fill('[data-education]', d.education.map(([t, org, y]) => `<li>${esc(t)}, ${esc(org)} — ${esc(y)}</li>`).join(''));
@@ -50,7 +49,7 @@
   if (design === 'piste') {
     const runs = [...d.jobs].reverse(); // oldest is run 1, matching the map's left-to-right order
     fill('[data-jobs]', runs.map((j, i) => `<li><span class="mark ${kindClass[j.kind]}">${i + 1}</span><div>
-      <h3>${esc(j.title)}</h3><div class="meta">${at(j)} — ${range(j, ' to ')}</div>${desc(j)}</div></li>`).join(''));
+      <h3>${esc(j.title)}</h3><div class="meta">${at(j)} · ${range(j, '–')}</div>${desc(j)}</div></li>`).join(''));
     runs.forEach((j, i) => {
       document.querySelectorAll(`[data-run="${i + 1}"]`).forEach(el =>
         el.setAttribute(el.tagName === 'path' ? 'stroke' : 'fill', kindColor[j.kind]));

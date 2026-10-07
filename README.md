@@ -1,16 +1,12 @@
-# Laura's CV - four HTML design directions
+# Laura Leiboff — CV designs
 
-Open `index.html` to compare all four. Each design also opens directly as a local HTML file; no build, package install, or web service is needed.
+Eight HTML designs of one CV, in English and French. Open `index.html` to compare them; add `?lang=fr` (or use the Français link) for French. Every page also opens directly as a local file, with no build step.
 
-- `content.js`: shared copy, jobs, languages, education, contact details.
-- `styles.css`: colors, typography and layout; each design has its own labeled section.
-- `cv.js`: small shared rendering helper.
-- `assets/laura-portrait.png`: original portrait extracted from the supplied CV.
+- `content.js`: all copy for both languages: personal details, jobs, languages, education and interface labels.
+- `01-…04-*.html`, `cv.js`, `styles.css`: designs 01–04.
+- `claude/*.html`, `claude/render.js`: designs 05–08 (decoration in each page, copy from `content.js`).
+- `assets/`: portrait and gallery previews (`assets/fr/` for French).
 
-All copy for all eight designs lives in `content.js`. Designs 01–04 render it through `cv.js`; designs 05–08 in `claude/` render it through `claude/render.js`, which keeps each page's decoration (mountain, stamps, map) in its HTML. Replace the old portrait with a higher-resolution file when possible.
+Use the Print / PDF button to export one A4 page. Turn on background graphics and turn off browser headers/footers in the print dialog. The toolbar does not print.
 
-Use the Print / PDF button to export an A4 page. Enable background graphics and disable browser headers/footers in the print dialog. The toolbar does not print.
-
-## GitHub Pages
-
-This folder is a standalone static site. GitHub Pages serves the `gh-pages` branch, containing only this folder. The full project remains local. To publish updates from the repository root, commit the CV changes and run `git subtree push --prefix=cv-designs origin gh-pages`. Do not push the full `main` branch: it contains unrelated projects.
+Editing, fit-checking and publishing are documented in `CLAUDE.md` at the repository root.

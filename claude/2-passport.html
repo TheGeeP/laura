@@ -88,19 +88,19 @@
     line-height: 1.5;
   }
 
-  .about { font-size: 11pt; margin: 6mm 0 2mm; max-width: 165mm; }
+  .about { font-size: 10.5pt; margin: 5mm 0 1mm; max-width: 170mm; }
 
   h2 {
     font-family: "Rubik", sans-serif; font-weight: 700;
     font-size: 14pt; color: var(--cover);
-    margin: 6mm 0 3mm;
+    margin: 5mm 0 3mm;
   }
 
   /* Stamps */
   .stamps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5mm 3mm;
+    gap: 4mm 3mm;
     align-items: center;
   }
   .stamp {
@@ -122,7 +122,7 @@
   /* Kilimanjaro stamp pressed over the corner of the data page */
   .kili { --c: var(--teal); position: absolute; right: 14mm; top: 84mm; width: 33mm !important; height: 33mm !important; transform: rotate(-12deg); }
   .kili p { color: var(--c); }
-  .kili .t { font-size: 9pt; }
+  .kili .t { font-size: 8pt; }
   .s1 { --c: var(--coral); transform: rotate(-3deg); }
   .s2 { --c: var(--violet); transform: rotate(2deg); }
   .s3 { --c: var(--teal); transform: rotate(-1.5deg); }
@@ -131,7 +131,7 @@
   .s6 { --c: var(--coral); transform: rotate(1.5deg); border-style: dashed; }
   .s7 { --c: var(--violet); transform: rotate(-1deg); border-style: dashed; }
 
-  .bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; margin-top: 2mm; }
+  .bottom { display: grid; grid-template-columns: 0.8fr 1.4fr 0.8fr; gap: 6mm; margin-top: 2mm; }
   .bottom ul { list-style: none; padding: 0; margin: 0; }
   .bottom li { margin-bottom: 1.4mm; }
   .bottom li b { color: var(--teal); }
@@ -148,7 +148,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
+    .page { box-shadow: none; margin: 0; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -174,41 +174,41 @@
 </head>
 <body data-design="passport">
 <nav class="cv-toolbar" aria-label="Design controls">
-  <a href="../index.html">← All designs</a>
-  <div><span>06 / Passport</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+  <a href="../index.html" data-keep-lang data-label="allDesigns">← All designs</a>
+  <div><a data-lang-switch href="?lang=fr">Français</a><span>06 / <span data-label="d6">Passport</span></span><button type="button" onclick="window.print()" data-label="print">Print / PDF</button></div>
 </nav>
 <main class="page">
   <section class="data">
     <div class="doc-title"><strong>Curriculum vitae</strong><span>Passport / Passeport / Paszport</span></div>
     <img class="photo" src="photo.jpg" alt="Laura Leiboff">
     <div class="fields">
-      <div class="field wide"><small>Surname / Given name</small><h1 data-cv="name"></h1></div>
-      <div class="field wide"><small>Profession</small><span data-cv="title"></span></div>
-      <div class="field"><small>Nationality</small><span data-cv="nationality"></span></div>
-      <div class="field"><small>Countries visited</small><span data-cv="countries"></span></div>
-      <div class="field"><small>Phone</small><span data-cv="phone"></span></div>
-      <div class="field"><small>Email</small><span data-cv="email"></span></div>
+      <div class="field wide"><small data-label="passportName">Surname / Given name</small><h1 data-cv="name"></h1></div>
+      <div class="field wide"><small data-label="passportProfession">Profession</small><span data-cv="title"></span></div>
+      <div class="field"><small data-label="passportNationality">Nationality</small><span data-cv="nationality"></span></div>
+      <div class="field"><small data-label="countriesVisited">Countries visited</small><span data-cv="countries"></span></div>
+      <div class="field"><small data-label="passportPhone">Phone</small><span data-cv="phone"></span></div>
+      <div class="field"><small data-label="passportEmail">Email</small><span data-cv="email"></span></div>
     </div>
     <div class="mrz" aria-hidden="true">P&lt;FRALEIBOFF&lt;&lt;LAURA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>TOURLEADER&lt;KILIMANJARO&lt;130COUNTRIES&lt;&lt;&lt;&lt;&lt;&lt;</div>
   </section>
-  <div class="stamp round kili"><div class="t">Kilimanjaro</div><div class="d">5,895 m · ×<span data-cv="kilimanjaro"></span></div><p>Tanzania</p></div>
+  <div class="stamp round kili"><div class="t" data-label="kilimanjaro">Kilimanjaro</div><div class="d"><span data-label="kiboHeight">5,895 m</span> · ×<span data-cv="kilimanjaro"></span></div><p data-label="tanzania">Tanzania</p></div>
 
   <p class="about" data-cv="about"></p>
 
-  <h2>Entries &amp; exits</h2>
+  <h2 data-label="passportStamps">Entries &amp; exits</h2>
   <div class="stamps" data-jobs></div>
 
   <div class="bottom">
     <section>
-      <h2>Languages</h2>
+      <h2 data-label="languages">Languages</h2>
       <ul data-languages></ul>
     </section>
     <section>
-      <h2>Education</h2>
+      <h2 data-label="education">Education</h2>
       <ul data-education></ul>
     </section>
     <section>
-      <h2>Interests</h2>
+      <h2 data-label="interests">Interests</h2>
       <ul data-interests></ul>
     </section>
   </div>

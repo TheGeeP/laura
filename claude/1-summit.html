@@ -88,7 +88,7 @@
   .about { font-size: 10pt; margin: 0 0 5mm; }
 
   .route { list-style: none; margin: 0; padding: 0; border-left: 3px dotted var(--sunrise); }
-  .route li { position: relative; padding: 0 0 3mm 6mm; }
+  .route li { position: relative; padding: 0 0 2.4mm 6mm; }
   .route li::before {
     content: ""; position: absolute; left: -7px; top: 3px;
     width: 11px; height: 11px; border-radius: 50%;
@@ -116,7 +116,7 @@
   .stat span { font-size: 8.5pt; }
 
   .langs { list-style: none; padding: 0; margin: 0; }
-  .langs li { display: grid; grid-template-columns: 15mm 1fr 19mm; align-items: center; gap: 2mm; margin-bottom: 1.4mm; }
+  .langs li { display: grid; grid-template-columns: 15mm 1fr 25mm; align-items: center; gap: 2mm; margin-bottom: 1.4mm; }
   .bar { height: 6px; border-radius: 3px; background: #E4E7F2; overflow: hidden; }
   .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--sunrise), var(--savanna)); }
   .langs small { color: var(--muted); font-size: 8pt; }
@@ -137,7 +137,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
+    .page { box-shadow: none; margin: 0; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -163,8 +163,8 @@
 </head>
 <body data-design="summit">
 <nav class="cv-toolbar" aria-label="Design controls">
-  <a href="../index.html">← All designs</a>
-  <div><span>05 / Summit</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+  <a href="../index.html" data-keep-lang data-label="allDesigns">← All designs</a>
+  <div><a data-lang-switch href="?lang=fr">Français</a><span>05 / <span data-label="d5">Summit</span></span><button type="button" onclick="window.print()" data-label="print">Print / PDF</button></div>
 </nav>
 <main class="page">
   <header class="sky">
@@ -203,41 +203,41 @@
         <text class="camp-year" x="150" y="213">2018</text><text class="camp-label" x="150" y="196">Gdańsk</text>
         <text class="camp-year" x="270" y="178">2019</text><text class="camp-label" x="270" y="161">Paris</text>
         <text class="camp-year" x="390" y="138">2020</text><text class="camp-label" x="390" y="121">Torgon</text>
-        <text class="camp-year" x="520" y="85">2022</text><text class="camp-label" x="520" y="68">Kilimanjaro</text>
-        <text class="camp-year" x="610" y="22">2026</text><text class="camp-label" x="568" y="42">5,895 m and up</text>
+        <text class="camp-year" x="520" y="85">2022</text><text class="camp-label" x="520" y="68" data-label="kilimanjaro">Kilimanjaro</text>
+        <text class="camp-year" x="610" y="22">2026</text><text class="camp-label" x="568" y="42" data-label="summitPeak">5,895 m and up</text>
       </g>
     </svg>
   </header>
 
   <div class="body">
     <section>
-      <h2>About</h2>
+      <h2 data-label="about">About</h2>
       <p class="about" data-cv="about"></p>
 
-      <h2>The route so far</h2>
+      <h2 data-label="summitRoute">The route so far</h2>
       <ol class="route" reversed data-jobs></ol>
     </section>
 
     <aside class="side">
       <div class="stats">
-        <div class="stat"><b data-cv="countries"></b><span>countries travelled</span></div>
-        <div class="stat"><b data-cv="kilimanjaro"></b><span>Kilimanjaro expeditions</span></div>
-        <div class="stat"><b data-cv="eventSize"></b><span>people at one event</span></div>
-        <div class="stat"><b data-cv="languagesCount"></b><span>languages spoken</span></div>
+        <div class="stat"><b data-cv="countries"></b><span data-label="countriesTravelled">countries travelled</span></div>
+        <div class="stat"><b data-cv="kilimanjaro"></b><span data-label="kiliExpeditions">Kilimanjaro expeditions</span></div>
+        <div class="stat"><b data-cv="eventSize"></b><span data-label="eventPeople">people at one event</span></div>
+        <div class="stat"><b data-cv="languagesCount"></b><span data-label="languagesSpoken">languages spoken</span></div>
       </div>
 
       <section>
-        <h2>Languages</h2>
+        <h2 data-label="languages">Languages</h2>
         <ul class="langs" data-languages></ul>
       </section>
 
       <section>
-        <h2>Education</h2>
+        <h2 data-label="education">Education</h2>
         <ul class="plain" data-education></ul>
       </section>
 
       <section>
-        <h2>Off the clock</h2>
+        <h2 data-label="summitInterests">Off the clock</h2>
         <div class="tags" data-interests></div>
       </section>
     </aside>

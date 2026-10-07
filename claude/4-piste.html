@@ -42,7 +42,7 @@
   .banner {
     background: var(--red);
     color: #fff;
-    padding: 7mm 12mm 6mm;
+    padding: 5.5mm 12mm 5mm;
     display: flex; align-items: center; gap: 6mm;
   }
   .banner img { width: 26mm; height: 26mm; object-fit: cover; border-radius: 3mm; border: 3px solid #fff; flex: none; }
@@ -62,11 +62,11 @@
   .map .peak { font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 13px; fill: var(--ink); }
   .map .alt { font-family: "Manrope", sans-serif; font-size: 11px; fill: var(--muted); }
 
-  .content { display: grid; grid-template-columns: 1.5fr 1fr; gap: 9mm; padding: 6mm 12mm 7mm; flex: 1; }
-  h2 { font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 12.5pt; margin: 0 0 3.5mm; }
+  .content { display: grid; grid-template-columns: 1.5fr 1fr; gap: 9mm; padding: 4mm 12mm 6mm; flex: 1; }
+  h2 { font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 12.5pt; margin: 0 0 2.5mm; }
 
   .runs { list-style: none; padding: 0; margin: 0; }
-  .runs li { display: grid; grid-template-columns: 9mm 1fr; gap: 3mm; margin-bottom: 2.6mm; }
+  .runs li { display: grid; grid-template-columns: 9mm 1fr; gap: 3mm; margin-bottom: 1.6mm; }
   .mark {
     width: 8mm; height: 8mm; display: grid; place-items: center;
     font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 9pt; color: #fff;
@@ -77,18 +77,18 @@
   .runs .meta { color: var(--muted); font-size: 9pt; }
   .runs p { margin: .5mm 0 0; }
 
-  .legend { display: flex; flex-wrap: wrap; gap: 2mm 4mm; margin: 0 0 3mm; padding: 0; list-style: none; font-size: 9pt; }
+  .legend { display: flex; flex-wrap: wrap; gap: 2mm 4mm; margin: 0 0 2mm; padding: 0; list-style: none; font-size: 9pt; }
   .legend li { display: flex; align-items: center; gap: 1.5mm; }
   .legend i { width: 5mm; height: 2.2mm; border-radius: 1mm; display: inline-block; }
 
   .about { margin: 0 0 3.5mm; font-size: 10pt; }
   .board {
-    background: var(--sign); border-radius: 2.5mm; padding: 3.5mm 4mm; margin-bottom: 4mm;
+    background: var(--sign); border-radius: 2.5mm; padding: 3mm 4mm; margin-bottom: 3mm;
     display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 4mm;
   }
   .board b { font-family: "Unbounded", sans-serif; font-size: 16pt; display: block; line-height: 1.1; }
   .board span { font-size: 8.5pt; }
-  .side section { margin-bottom: 4.5mm; }
+  .side section { margin-bottom: 3.5mm; }
   .side ul { list-style: none; padding: 0; margin: 0; }
   .side li { margin-bottom: 1.3mm; }
   .side li strong { display: inline-block; min-width: 16mm; }
@@ -104,7 +104,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
+    .page { box-shadow: none; margin: 0; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -130,8 +130,8 @@
 </head>
 <body data-design="piste">
 <nav class="cv-toolbar" aria-label="Design controls">
-  <a href="../index.html">← All designs</a>
-  <div><span>08 / Piste map</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+  <a href="../index.html" data-keep-lang data-label="allDesigns">← All designs</a>
+  <div><a data-lang-switch href="?lang=fr">Français</a><span>08 / <span data-label="d8">Piste map</span></span><button type="button" onclick="window.print()" data-label="print">Print / PDF</button></div>
 </nav>
 <main class="page">
   <header class="banner">
@@ -143,7 +143,7 @@
     </div>
   </header>
 
-  <svg class="map" viewBox="0 28 800 350" aria-label="Career drawn as a ski-resort trail map with seven numbered runs">
+  <svg class="map" viewBox="0 28 800 340" aria-label="Career drawn as a ski-resort trail map with seven numbered runs">
     <defs>
       <symbol id="tree" viewBox="0 0 20 30"><path d="M10 0 L20 22 L13 22 L13 30 L7 30 L7 22 L0 22 Z" fill="var(--pine)"/></symbol>
     </defs>
@@ -182,7 +182,7 @@
     <text class="num" x="454" y="219">5</text><text class="num" x="530" y="197">6</text><text class="num" x="672" y="236">7</text>
 
     <!-- peak names -->
-    <text class="peak" x="412" y="40">Kibo</text><text class="alt" x="452" y="40">5,895 m</text>
+    <text class="peak" x="412" y="40">Kibo</text><text class="alt" x="452" y="40" data-label="kiboHeight">5,895 m</text>
     <text class="peak" x="650" y="80">Camp 2026</text>
 
     <!-- trees -->
@@ -200,12 +200,12 @@
 
   <div class="content">
     <section>
-      <h2>Runs, in order of descent</h2>
+      <h2 data-label="pisteRuns">Runs, in order of descent</h2>
       <ul class="legend">
-        <li><i class="g"></i>Guiding</li>
-        <li><i class="b"></i>Ski teaching</li>
-        <li><i class="r"></i>Team &amp; camp management</li>
-        <li><i class="k"></i>Expeditions</li>
+        <li><i class="g"></i><span data-label="pisteGuide">Guiding</span></li>
+        <li><i class="b"></i><span data-label="pisteSki">Ski teaching</span></li>
+        <li><i class="r"></i><span data-label="pisteManage">Team &amp; camp management</span></li>
+        <li><i class="k"></i><span data-label="pisteExpedition">Expeditions</span></li>
       </ul>
       <ol class="runs" data-jobs></ol>
     </section>
@@ -213,21 +213,21 @@
     <aside class="side">
       <p class="about" data-cv="intro"></p>
       <div class="board">
-        <div><b data-cv="countries"></b><span>countries travelled</span></div>
-        <div><b><span data-cv="kilimanjaro"></span>×</b><span>Kilimanjaro</span></div>
-        <div><b data-cv="eventSize"></b><span>people at one event</span></div>
-        <div><b data-cv="languagesCount"></b><span>languages</span></div>
+        <div><b data-cv="countries"></b><span data-label="countriesTravelled">countries travelled</span></div>
+        <div><b><span data-cv="kilimanjaro"></span>×</b><span data-label="kilimanjaro">Kilimanjaro</span></div>
+        <div><b data-cv="eventSize"></b><span data-label="eventPeople">people at one event</span></div>
+        <div><b data-cv="languagesCount"></b><span data-label="languagesShort">languages</span></div>
       </div>
       <section>
-        <h2>Languages</h2>
+        <h2 data-label="languages">Languages</h2>
         <ul data-languages></ul>
       </section>
       <section>
-        <h2>Education</h2>
+        <h2 data-label="education">Education</h2>
         <ul data-education></ul>
       </section>
       <section>
-        <h2>Après-ski</h2>
+        <h2 data-label="pisteInterests">Après-ski</h2>
         <ul data-interests></ul>
       </section>
     </aside>

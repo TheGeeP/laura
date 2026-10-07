@@ -54,7 +54,7 @@
   .name {
     position: relative;
     font-family: "Anton", sans-serif;
-    font-size: 92pt;
+    font-size: 80pt;
     line-height: .86;
     margin: 0;
     text-transform: uppercase;
@@ -85,24 +85,24 @@
   .photo-wrap img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15) brightness(1.15); mix-blend-mode: screen; display: block; }
 
   .about {
-    font-size: 11.5pt; line-height: 1.5; margin: 8mm 0 0; max-width: 125mm;
+    font-size: 10.5pt; line-height: 1.45; margin: 5mm 0 0; max-width: 125mm;
   }
 
-  .cols { display: grid; grid-template-columns: 1.6fr 1fr; gap: 10mm; margin-top: 9mm; }
+  .cols { display: grid; grid-template-columns: 1.85fr 1fr; gap: 10mm; margin-top: 6mm; }
   h2 {
     font-family: "Anton", sans-serif; font-weight: 400;
     font-size: 22pt; line-height: 1; margin: 0 0 4mm;
     color: var(--pink);
   }
   .jobs { list-style: none; margin: 0; padding: 0; }
-  .jobs li { display: grid; grid-template-columns: 22mm 1fr; gap: 3mm; padding: 2.6mm 0; border-top: 2px solid var(--blue); }
+  .jobs li { display: grid; grid-template-columns: 22mm 1fr; gap: 3mm; padding: 1.7mm 0; border-top: 2px solid var(--blue); }
   .jobs li:last-child { border-bottom: 2px solid var(--blue); }
   .yr { font-family: "Anton", sans-serif; font-size: 13pt; color: var(--blue); line-height: 1.1; }
   .jobs h3 { margin: 0; font-size: 11pt; font-weight: 700; }
   .jobs p { margin: .6mm 0 0; }
   .jobs .at { color: var(--pink); font-weight: 700; }
 
-  .side section { margin-bottom: 7mm; }
+  .side section { margin-bottom: 5mm; }
   .side ul { list-style: none; margin: 0; padding: 0; }
   .side li { margin-bottom: 1.5mm; }
   .lang b { display: inline-block; min-width: 18mm; }
@@ -124,7 +124,7 @@
   @page { size: A4; margin: 0; }
   @media print {
     body { background: none; padding: 0; }
-    .page { box-shadow: none; margin: 0; height: 297mm; overflow: hidden; }
+    .page { box-shadow: none; margin: 0; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
   /* Screen-only toolbar: back to gallery + print */
@@ -150,8 +150,8 @@
 </head>
 <body data-design="riso">
 <nav class="cv-toolbar" aria-label="Design controls">
-  <a href="../index.html">← All designs</a>
-  <div><span>07 / Riso</span><button type="button" onclick="window.print()">Print / PDF</button></div>
+  <a href="../index.html" data-keep-lang data-label="allDesigns">← All designs</a>
+  <div><a data-lang-switch href="?lang=fr">Français</a><span>07 / <span data-label="d7">Riso</span></span><button type="button" onclick="window.print()" data-label="print">Print / PDF</button></div>
 </nav>
 <main class="page">
   <div class="dots y" aria-hidden="true"></div>
@@ -159,7 +159,7 @@
 
   <h1 class="name"><span data-cv="firstName"></span><span data-cv="lastName"></span></h1>
   <div class="photo-wrap"><img src="photo.jpg" alt="Laura Leiboff"></div>
-  <div class="badge"><b data-cv="countries"></b><span>countries<br>and counting</span></div>
+  <div class="badge"><b data-cv="countries"></b><span data-label="risoBadge">countries and counting</span></div>
 
   <p class="tagline" data-cv="title"></p>
   <p class="contact"><span data-cv="phone"></span> &nbsp;/&nbsp; <a data-cv="email"></a> &nbsp;/&nbsp; <span data-cv="nationality"></span></p>
@@ -168,22 +168,22 @@
 
   <div class="cols">
     <section>
-      <h2>Work</h2>
+      <h2 data-label="risoWork">Work</h2>
       <ol class="jobs" reversed data-jobs></ol>
     </section>
 
     <aside class="side">
-      <section class="kili"><span data-cv="kilimanjaro"></span> × Kilimanjaro<small>5,895 m, with the whole team on top</small></section>
+      <section class="kili"><span data-cv="kilimanjaro"></span> × <span data-label="kilimanjaro">Kilimanjaro</span><small data-label="risoKili">5,895 m, with the whole team on top</small></section>
       <section>
-        <h2>Languages</h2>
+        <h2 data-label="languages">Languages</h2>
         <ul class="lang" data-languages></ul>
       </section>
       <section>
-        <h2>Studied</h2>
+        <h2 data-label="risoStudied">Studied</h2>
         <ul data-education></ul>
       </section>
       <section>
-        <h2>Loves</h2>
+        <h2 data-label="risoLoves">Loves</h2>
         <div class="chips" data-interests></div>
       </section>
     </aside>
