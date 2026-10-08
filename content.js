@@ -11,8 +11,8 @@ window.CV_CONTENT = {
     kilimanjaro: '5',
     eventSize: '500+',
     // Short version for tighter layouts; `about` for designs with room for more.
-    intro: 'Tour leader since 2022, supporting groups and liaising with local guides: five Kilimanjaro trips, events for over 500 people and ski instruction since 2019.',
-    about: 'Since 2022, I have coordinated mountain trips on the ground, including five to Kilimanjaro. I am the group’s point of contact and liaise with local guides and crews. Trained in events management in Paris, I have organised events for over 500 people, taught skiing every winter since 2019 and managed teams on three continents.',
+    intro: 'Tour leader since 2016, supporting groups and liaising with local guides: five Kilimanjaro trips, events for over 500 people and ski instruction since 2019.',
+    about: 'Tour leader since 2016, with five Kilimanjaro trips since 2022. I am the group’s point of contact and liaise with local guides and crews. Trained in events management in Paris, I have organised events for over 500 people, taught skiing every winter since 2019 and managed teams on three continents.',
     // [language, level, bar width % used by Summit]
     languages: [
       ['French', 'Native', 100], ['Polish', 'Bilingual', 95],
@@ -75,8 +75,8 @@ window.CV_CONTENT = {
     countries: '130+',
     kilimanjaro: '5',
     eventSize: '500+',
-    intro: 'Tour leader depuis 2022, référente des groupes et interlocutrice des guides locaux : cinq voyages au Kilimandjaro, des événements de plus de 500 personnes et l’enseignement du ski depuis 2019.',
-    about: 'Depuis 2022, je coordonne des séjours en montagne sur le terrain, dont cinq au Kilimandjaro. Référente du groupe, j’assure la liaison avec les guides et les équipes locales. Formée à l’événementiel à Paris, j’ai organisé des événements de plus de 500 personnes, enseigné le ski chaque hiver depuis 2019 et encadré des équipes sur trois continents.',
+    intro: 'Tour leader depuis 2016, référente des groupes et interlocutrice des guides locaux : cinq voyages au Kilimandjaro, des événements de plus de 500 personnes et l’enseignement du ski depuis 2019.',
+    about: 'Tour leader depuis 2016, avec cinq voyages au Kilimandjaro depuis 2022. Référente du groupe, j’assure la liaison avec les guides et les équipes locales. Formée à l’événementiel à Paris, j’ai organisé des événements de plus de 500 personnes, enseigné le ski chaque hiver depuis 2019 et encadré des équipes sur trois continents.',
     languages: [
       ['Français', 'Langue maternelle', 100], ['Polonais', 'Bilingue', 95],
       ['Anglais', 'Courant', 85], ['Espagnol', 'Intermédiaire', 60]
